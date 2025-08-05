@@ -16,12 +16,12 @@ const LeaderBoard = () => {
   const getleaderBoardData = async () => {
     try {
       const response = await fetch(
-        "http://localhost:4000/api/v1/getleaderboard"
+        `${import.meta.env.VITE_API_URL}/getleaderboard`
       );
 
       const data = await response.json();
       if (data.success) {
-        setUsers(data.leaderboard); // ✅ only the leaderboard array
+        setUsers(data.leaderboard);
       } else {
         console.error("Failed to fetch leaderboard");
       }
