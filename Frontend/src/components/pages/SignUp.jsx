@@ -12,7 +12,7 @@ const SignUp = () => {
     const { name, email, password } = Object.fromEntries(formData);
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/createUser`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/createUser`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

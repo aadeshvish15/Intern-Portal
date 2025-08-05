@@ -16,7 +16,7 @@ const LeaderBoard = () => {
   const getleaderBoardData = async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/getleaderboard`
+        `${import.meta.env.VITE_API_URL}/api/v1/getleaderboard`
       );
 
       const data = await response.json();

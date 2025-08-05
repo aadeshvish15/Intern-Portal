@@ -11,7 +11,7 @@ const Login = () => {
     const { email, password } = Object.fromEntries(formData);
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/loginUser`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/loginUser`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
